@@ -15,6 +15,15 @@ files:
 - name: test/ConverterTest.java
   visible: false
   learner_created: false
+- name: src/converter/Converter.java
+  visible: true
+  learner_created: true
+- name: src/converter/XmlToJsonConverter.java
+  visible: true
+  learner_created: true
+- name: src/converter/JsonToXmlConverter.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/61/stages/329/implement
-status: Unchecked
+status: Solved
 record: -1
