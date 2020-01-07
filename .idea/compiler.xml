@@ -8,6 +8,8 @@
       <module name="Problems-Avoid_NPE_test" target="11" />
       <module name="Problems-Blocked_phones_main" target="11" />
       <module name="Problems-Blocked_phones_test" target="11" />
+      <module name="Problems-Check_IP_address_main" target="11" />
+      <module name="Problems-Check_IP_address_test" target="11" />
       <module name="Problems-Concat_positive_numbers_main" target="11" />
       <module name="Problems-Concat_positive_numbers_test" target="11" />
       <module name="Problems-Find_the_nearest_number_main" target="11" />
@@ -16,10 +18,16 @@
       <module name="Problems-From_Double_to_Integer_test" target="11" />
       <module name="Problems-Individual_taxes_main" target="11" />
       <module name="Problems-Individual_taxes_test" target="11" />
+      <module name="Problems-Kidnapper_of_Ice_cream_main" target="11" />
+      <module name="Problems-Kidnapper_of_Ice_cream_test" target="11" />
+      <module name="Problems-Processing_maps_-_2_main" target="11" />
+      <module name="Problems-Processing_maps_-_2_test" target="11" />
       <module name="Problems-Removing_duplicates_and_sorting_main" target="11" />
       <module name="Problems-Removing_duplicates_and_sorting_test" target="11" />
       <module name="Problems-Removing_elements_main" target="11" />
       <module name="Problems-Removing_elements_test" target="11" />
+      <module name="Problems-Sherlock_Holmes_-_1_main" target="11" />
+      <module name="Problems-Sherlock_Holmes_-_1_test" target="11" />
       <module name="Problems-Spell_checker_main" target="11" />
       <module name="Problems-Spell_checker_test" target="11" />
       <module name="Problems-Squaring_numbers_main" target="11" />
@@ -32,6 +40,8 @@
       <module name="Problems-Symmetric_difference_test" target="11" />
       <module name="Problems-Two_numbers_never_occur_to_each_other_main" target="11" />
       <module name="Problems-Two_numbers_never_occur_to_each_other_test" target="11" />
+      <module name="Problems-Vehicle_registration_number_main" target="11" />
+      <module name="Problems-Vehicle_registration_number_test" target="11" />
       <module name="util_main" target="11" />
       <module name="util_test" target="11" />
     </bytecodeTargetLevel>
