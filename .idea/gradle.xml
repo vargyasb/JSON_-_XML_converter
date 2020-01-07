@@ -18,8 +18,13 @@
             <option value="$PROJECT_DIR$/Problems/Find the nearest number" />
             <option value="$PROJECT_DIR$/Problems/From Double to Integer" />
             <option value="$PROJECT_DIR$/Problems/Individual taxes" />
+            <option value="$PROJECT_DIR$/Problems/Removing duplicates and sorting" />
+            <option value="$PROJECT_DIR$/Problems/Removing elements" />
+            <option value="$PROJECT_DIR$/Problems/Spell checker" />
             <option value="$PROJECT_DIR$/Problems/Squaring numbers" />
+            <option value="$PROJECT_DIR$/Problems/Strict superset" />
             <option value="$PROJECT_DIR$/Problems/Sum array elements greater than a value" />
+            <option value="$PROJECT_DIR$/Problems/Symmetric difference" />
             <option value="$PROJECT_DIR$/Problems/Two numbers never occur to each other" />
             <option value="$PROJECT_DIR$/util" />
           </set>

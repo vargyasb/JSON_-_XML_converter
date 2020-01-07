@@ -8,7 +8,11 @@ class CollectionUtils {
 
     public static Collection<Integer> pow2(Collection<Integer> numbers) {
         // write your code here
-        return numbers;
+        Collection<Integer> poweredby2 = new ArrayList<>();
+        for (Integer intNum : numbers) {
+            poweredby2.add(intNum*intNum);
+        }
+        return poweredby2;
     }
 }
 
