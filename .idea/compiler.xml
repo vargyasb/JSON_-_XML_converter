@@ -12,26 +12,50 @@
       <module name="Problems-Check_IP_address_test" target="11" />
       <module name="Problems-Concat_positive_numbers_main" target="11" />
       <module name="Problems-Concat_positive_numbers_test" target="11" />
+      <module name="Problems-Extracting_big_numbers_from_a_text_main" target="11" />
+      <module name="Problems-Extracting_big_numbers_from_a_text_test" target="11" />
+      <module name="Problems-Extracting_words_from_a_text_main" target="11" />
+      <module name="Problems-Extracting_words_from_a_text_test" target="11" />
+      <module name="Problems-Find_a_word_with_a_given_length_main" target="11" />
+      <module name="Problems-Find_a_word_with_a_given_length_test" target="11" />
+      <module name="Problems-Find_all_passwords_main" target="11" />
+      <module name="Problems-Find_all_passwords_test" target="11" />
       <module name="Problems-Find_the_nearest_number_main" target="11" />
       <module name="Problems-Find_the_nearest_number_test" target="11" />
       <module name="Problems-From_Double_to_Integer_main" target="11" />
       <module name="Problems-From_Double_to_Integer_test" target="11" />
+      <module name="Problems-Illegal_identifiers_main" target="11" />
+      <module name="Problems-Illegal_identifiers_test" target="11" />
+      <module name="Problems-In_the_middle_of_a_word_main" target="11" />
+      <module name="Problems-In_the_middle_of_a_word_test" target="11" />
       <module name="Problems-Individual_taxes_main" target="11" />
       <module name="Problems-Individual_taxes_test" target="11" />
       <module name="Problems-Kidnapper_of_Ice_cream_main" target="11" />
       <module name="Problems-Kidnapper_of_Ice_cream_test" target="11" />
+      <module name="Problems-Number_parsing_main" target="11" />
+      <module name="Problems-Number_parsing_test" target="11" />
       <module name="Problems-Processing_maps_-_2_main" target="11" />
       <module name="Problems-Processing_maps_-_2_test" target="11" />
+      <module name="Problems-Remove_comments_main" target="11" />
+      <module name="Problems-Remove_comments_test" target="11" />
+      <module name="Problems-Remove_extra_spaces_main" target="11" />
+      <module name="Problems-Remove_extra_spaces_test" target="11" />
+      <module name="Problems-Remove_HTML_tags_main" target="11" />
+      <module name="Problems-Remove_HTML_tags_test" target="11" />
       <module name="Problems-Removing_duplicates_and_sorting_main" target="11" />
       <module name="Problems-Removing_duplicates_and_sorting_test" target="11" />
       <module name="Problems-Removing_elements_main" target="11" />
       <module name="Problems-Removing_elements_test" target="11" />
+      <module name="Problems-Safe_password_main" target="11" />
+      <module name="Problems-Safe_password_test" target="11" />
       <module name="Problems-Sherlock_Holmes_-_1_main" target="11" />
       <module name="Problems-Sherlock_Holmes_-_1_test" target="11" />
       <module name="Problems-Spell_checker_main" target="11" />
       <module name="Problems-Spell_checker_test" target="11" />
       <module name="Problems-Squaring_numbers_main" target="11" />
       <module name="Problems-Squaring_numbers_test" target="11" />
+      <module name="Problems-Start_or_end_of_a_word_main" target="11" />
+      <module name="Problems-Start_or_end_of_a_word_test" target="11" />
       <module name="Problems-Strict_superset_main" target="11" />
       <module name="Problems-Strict_superset_test" target="11" />
       <module name="Problems-Sum_array_elements_greater_than_a_value_main" target="11" />

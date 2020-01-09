@@ -7,15 +7,17 @@ public class Main {
 
         String ip = scanner.nextLine();
 
-        String regex =  "(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\." +
-                        "(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\." +
-                        "(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\\." +
-                        "(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])";
+        String regex =  "(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d|\\d)\\." +
+                        "(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d|\\d)\\." +
+                        "(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d|\\d)\\." +
+                        "(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d|\\d)";
 
-        if (ip.matches(regex)){
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
-        }
+        //referencia megoldas, szar, mert a 09.09.09.09 IP-re is matchel
+//        final String bytePattern = "(1?\\d?\\d|2[0-4]\\d|25[0-5])";
+//        final String ipPattern = String.join(
+//                "\\.", bytePattern, bytePattern, bytePattern, bytePattern
+//        );
+
+        System.out.println(ip.matches(regex) ? "YES" : "NO");
     }
 }
