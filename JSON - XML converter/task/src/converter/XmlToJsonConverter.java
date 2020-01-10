@@ -85,8 +85,6 @@ public class XmlToJsonConverter implements Converter {
                 return "{\"" + tag + "\": { " + printHashMap(attributeMap) + "\"#" + tag + "\" : " + null + " } }";
             }
         }
-
-        //return "{\"" + tag + "\":" + elementContent + "}";
     }
 
     private String printHashMap(Map<String, String> map) {

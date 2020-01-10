@@ -541,10 +541,6 @@ files:
         }
     }
   learner_created: true
-- name: test.txt
-  visible: true
-  text: <employee department = "manager">Garry Smith</employee>
-  learner_created: false
 feedback_link: https://hyperskill.org/projects/61/stages/330/implement
-status: Unchecked
+status: Failed
 record: 2

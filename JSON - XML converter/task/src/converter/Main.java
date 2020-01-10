@@ -12,7 +12,6 @@ public class Main {
         try (Scanner scanner = new Scanner(file)){
             while (scanner.hasNextLine()){
                 input = scanner.nextLine().trim();
-                System.out.println(input);
                 conversionDeterm(input);
             }
         } catch (FileNotFoundException e) {
