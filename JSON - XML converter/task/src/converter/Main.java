@@ -11,9 +11,10 @@ public class Main {
         File file = new File("./test.txt");
         try (Scanner scanner = new Scanner(file)){
             while (scanner.hasNextLine()){
-                input = scanner.nextLine().trim();
-                conversionDeterm(input);
+                input += scanner.nextLine().trim();
             }
+            //System.out.println(input);
+            conversionDeterm(input);
         } catch (FileNotFoundException e) {
             System.out.println("Error " + e.getMessage());
         } catch (Exception e) {

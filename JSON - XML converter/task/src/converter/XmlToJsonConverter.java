@@ -31,8 +31,6 @@ public class XmlToJsonConverter implements Converter {
         int emptyElementIndicator = text.indexOf("/>");
         String tag = "";
         String elementContent = "";
-        String attribute = "";
-        String attributeVal = "";
         Map<String, String> attributeMap = new LinkedHashMap<>();
 
         if (emptyElementIndicator == -1) { //ha nem empty xml tag, pl nem <employee/>
@@ -72,7 +70,7 @@ public class XmlToJsonConverter implements Converter {
                     tag = matcher.group();
                 }
                 return "{\"" + tag + "\":" + null + "}";
-            } else {
+            } else { // van benne attribute
                 matcher = Pattern.compile("(?<=)[0-9a-z]+").matcher(text);
                 if (matcher.find()) {
                     tag = matcher.group();
