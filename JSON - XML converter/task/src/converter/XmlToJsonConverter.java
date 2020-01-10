@@ -1,5 +1,7 @@
 package converter;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -29,25 +31,69 @@ public class XmlToJsonConverter implements Converter {
         int emptyElementIndicator = text.indexOf("/>");
         String tag = "";
         String elementContent = "";
+        String attribute = "";
+        String attributeVal = "";
+        Map<String, String> attributeMap = new LinkedHashMap<>();
 
-        if (emptyElementIndicator == -1) {
-            if (matcher.find()) {
-                elementContent = "\"" + matcher.replaceAll("") + "\"";
-                matcher = Pattern.compile("(?<=<)[0-9a-z]+", Pattern.CASE_INSENSITIVE).matcher(text);
+        if (emptyElementIndicator == -1) { //ha nem empty xml tag, pl nem <employee/>
+            if (!text.contains("\"")) { //ha nincs benne ", akkor nincs attribute
+                if (matcher.find()) {
+                    elementContent = "\"" + matcher.replaceAll("") + "\"";
+                    matcher = Pattern.compile("(?<=<)[0-9a-z]+", Pattern.CASE_INSENSITIVE).matcher(text);
+                    if (matcher.find()) {
+                        tag = matcher.group();
+                    }
+                }
+                return "{\"" + tag + "\":" + elementContent + "}";
+            } else {//van benne attribute
+                if (matcher.find()) {
+                    elementContent = "\"" + matcher.replaceAll("") + "\"";
+                    matcher = Pattern.compile("(?<=<)[0-9a-z]+", Pattern.CASE_INSENSITIVE).matcher(text);
+                    if (matcher.find()) {
+                        tag = matcher.group();
+                    }
+                    //((?<=\s)[0-9a-z]+|(?<=\s)".*?") elkapja az attribute es attribute value-kat
+                    //<.*?(?<=\s)[0-9a-z]+.*?> replace a text-et csak a < > koze esore
+                    matcher = Pattern.compile("<.*?(?<=\\s)[0-9a-z]+.*?>", Pattern.CASE_INSENSITIVE).matcher(text);
+                    String tagWithAttributes = "";
+                    if (matcher.find()) { tagWithAttributes = matcher.group(); }
+                    matcher = Pattern.compile("((?<=\\s)[0-9a-z]+|(?<=\\s)\".*?\")", Pattern.CASE_INSENSITIVE).matcher(tagWithAttributes);
+                    while (matcher.find()) {
+                        attributeMap.put(matcher.group(),
+                                matcher.find() ? matcher.group() : "");
+                    }
+                }
+                return "{\"" + tag + "\": { " + printHashMap(attributeMap) + "\"#" + tag + "\" : " + elementContent + " } }";
+            }
+        } else { //ha empty xml tag, pl <employee/>
+            if (!text.contains("\"")){ //ha nincs benne ", akkor nincs attribute
+                matcher = Pattern.compile("(?<=)[0-9a-z]+").matcher(text);
                 if (matcher.find()) {
                     tag = matcher.group();
                 }
-            }
-        } else if (text.contains("\"")) {
-            //ide
-        } else {
-            elementContent = null;
-            matcher = Pattern.compile("(?<=)[0-9a-z]+").matcher(text);
-            if (matcher.find()) {
-                tag = matcher.group();
+                return "{\"" + tag + "\":" + null + "}";
+            } else {
+                matcher = Pattern.compile("(?<=)[0-9a-z]+").matcher(text);
+                if (matcher.find()) {
+                    tag = matcher.group();
+                }
+                matcher = Pattern.compile("((?<=\\s)[0-9a-z]+|(?<=\\s)\".*?\")", Pattern.CASE_INSENSITIVE).matcher(text);
+                while (matcher.find()) {
+                    attributeMap.put(matcher.group(),
+                            matcher.find() ? matcher.group() : "");
+                }
+                return "{\"" + tag + "\": { " + printHashMap(attributeMap) + "\"#" + tag + "\" : " + null + " } }";
             }
         }
 
-        return "{\"" + tag + "\":" + elementContent + "}";
+        //return "{\"" + tag + "\":" + elementContent + "}";
+    }
+
+    private String printHashMap(Map<String, String> map) {
+        String returnVal = "";
+        for (String key : map.keySet()) {
+            returnVal += "\"@" + key + "\" : " + map.get(key) + ", ";
+        }
+        return returnVal;
     }
 }
